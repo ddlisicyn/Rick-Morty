@@ -1,7 +1,5 @@
 import React from 'react';
 
-export const App = () => {
-  return (
-    <p>228</p>
-  );
-}
+export const App = () => (
+	<p>228</p>
+);
