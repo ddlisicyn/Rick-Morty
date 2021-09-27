@@ -30,6 +30,8 @@
         "no-return-await": "off",
         "indent": ["error", "tab"],
         "no-tabs": "off",
-        "react/jsx-indent": ["error", "tab"]
+        "react/jsx-indent": ["error", "tab"],
+        "linebreak-style": "off",
+        "react/jsx-indent-props": ["error", "tab"]
     }
 }

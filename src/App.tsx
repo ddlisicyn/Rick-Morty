@@ -1,5 +1,6 @@
 import React from 'react';
+import { MainPage } from './containers/MainPage/MainPage';
 
 export const App = () => (
-	<p>228</p>
+	<MainPage />
 );
