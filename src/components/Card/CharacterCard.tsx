@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Character } from '../../types';
 
 export const CharacterCard:FC<{data: Character}> = ({ data }) => (
-	<Card sx={{ width: 200 }}>
+	<Card sx={{ width: 220 }}>
 		<CardMedia
 			component="img"
 			height="140"
@@ -15,20 +15,17 @@ export const CharacterCard:FC<{data: Character}> = ({ data }) => (
 			style={{ objectFit: 'contain' }}
 		/>
 		<CardContent>
-			<Typography gutterBottom variant="h5" component="div">
+			<Typography variant="subtitle1">
 				{data.name}
 			</Typography>
-			<Typography variant="body2" color="text.secondary">
+			<Typography>
 				{data.gender}
 			</Typography>
-			<Typography>
+			<Typography variant="caption">
 				{data.species}
 			</Typography>
 			<Typography>
 				{data.status}
-			</Typography>
-			<Typography>
-				{data.gender}
 			</Typography>
 		</CardContent>
 	</Card>

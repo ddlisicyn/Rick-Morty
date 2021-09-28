@@ -1,4 +1,8 @@
 .container {
-	margin: 0 auto;
+	width: 96%;
+	margin: 32px auto 0px auto;
 	max-width: 1440px;
+	min-height: 90vh;
+    background-color: #edeef0;
+    padding: 0 24px;
 }

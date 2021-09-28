@@ -19,11 +19,9 @@ export const Selector:FC<PropTypes> = ({
 	value,
 }) => (
 	<Box sx={{ minWidth: 120 }}>
-		<FormControl fullWidth>
-			<InputLabel id="demo-simple-select-label">{title}</InputLabel>
+		<FormControl fullWidth size="small">
+			<InputLabel>{title}</InputLabel>
 			<Select
-				labelId="demo-simple-select-label"
-				id="demo-simple-select"
 				value={value}
 				label={title}
 				onChange={handleChange}
