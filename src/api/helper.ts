@@ -1,9 +1,9 @@
 export const getData = async (url: string) => {
 	const response = await fetch(url);
 
-	if (!response.ok) {
-		throw new Error(`Could not fetch ${url}, status: ${response.status}`);
+	if (response.ok) {
+		return await response.json();
 	}
 
-	return await response.json();
+	throw Error;
 };
