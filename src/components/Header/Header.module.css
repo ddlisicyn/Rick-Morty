@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
+    background-color: #ffffff;
 }
 
 .header img {
@@ -16,4 +17,24 @@
 
 .filter > * {
     margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 18px;
+    }
+
+    .header img {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .filter button {
+        display: none;
+    }
 }

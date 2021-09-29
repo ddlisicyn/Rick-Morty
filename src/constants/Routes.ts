@@ -1,4 +1,4 @@
-export const routes = {
-	core: '/',
-	profile: '/profile',
+export const ROUTES = {
+	CORE: '/',
+	PROFILE: '/profile',
 };

@@ -1,0 +1,15 @@
+.name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.icons {
+	display: flex;
+}
+
+.icon {
+	width: 30px;
+	cursor: pointer;
+}

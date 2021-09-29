@@ -8,10 +8,10 @@ import { CharacterCard } from '../../components/Card/CharacterCard';
 import { Loader } from '../../components/Loader/Loader';
 import { getCharacters, getPageCharacters } from '../../api/service';
 import { PaginationInfo, Character } from '../../types';
-import style from './MainPage.module.css';
-import { routes } from '../../constants/Routes';
+import { ROUTES } from '../../constants/routes';
+import { Empty } from '../../components/Empty/Empty';
 
-const { core, profile } = routes;
+const { PROFILE } = ROUTES;
 
 export const MainPage = () => {
 	const [paginationInfo, setPaginationInfo] = useState<PaginationInfo>();
@@ -54,7 +54,7 @@ export const MainPage = () => {
 	};
 
 	const handleClick = () => {
-		history.push(profile);
+		history.push(PROFILE);
 	};
 
 	return (
@@ -67,24 +67,30 @@ export const MainPage = () => {
 			/>
 			<Page>
 				<Loader loading={loading}>
-					<Grid
-						container
-						spacing={{ xs: 2, md: 4 }}
-						columns={{ xs: 4, sm: 6, md: 12 }}
-					>
-						{
-							characters.length ? characters.map((character) => (
-								<Grid item xs={2} sm={2} md={3} key={character.id}>
-									<CharacterCard data={character} />
-								</Grid>
-							)) : 'No characters was found'
-						}
-					</Grid>
-					<Pagination
-						style={{ margin: '24px 0 12px 0' }}
-						onChange={(e, page) => handlePageChange(page)}
-						count={paginationInfo?.pages}
-					/>
+					{characters.length ? (
+						<>
+							<Grid
+								container
+								spacing={{ xs: 2, md: 4 }}
+								columns={{ xs: 4, sm: 6, md: 12 }}
+							>
+								{
+									characters.map((character) => (
+										<Grid item xs={2} sm={2} md={3} key={character.id}>
+											<CharacterCard data={character} />
+										</Grid>
+									))
+								}
+							</Grid>
+							<Pagination
+								style={{ padding: '24px 0' }}
+								onChange={(_, page) => handlePageChange(page)}
+								count={paginationInfo?.pages}
+							/>
+						</>
+					) : (
+						<Empty text="No characters was found" />
+					)}
 				</Loader>
 			</Page>
 		</>

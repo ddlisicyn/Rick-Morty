@@ -32,6 +32,8 @@
         "no-tabs": "off",
         "react/jsx-indent": ["error", "tab"],
         "linebreak-style": "off",
-        "react/jsx-indent-props": ["error", "tab"]
+        "react/jsx-indent-props": ["error", "tab"],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"]
     }
 }

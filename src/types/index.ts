@@ -10,17 +10,30 @@ export type PaginationInfo = {
 	prev: string | null
 }
 
+export enum Genders {
+	Male = 'Male',
+	Female = 'Female',
+	Genderless = 'Genderless',
+	Unknown = 'unknown'
+}
+
+export enum Status {
+	Alive = 'Alive',
+	Dead = 'Dead',
+	Unknown = 'unknown'
+}
+
 export type Character = {
 	id: number,
 	name: string,
-	status: string,
+	status: Status,
 	species: string,
 	type: string,
-	gender: string,
-	origin: Origin,
-	location: Origin,
+	gender: Genders,
+	origin?: Origin,
+	location?: Origin,
 	image: string,
-	episode: [],
+	episode: string[],
 	url: string,
 	created: string
 };

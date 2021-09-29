@@ -1,0 +1,33 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2%;
+}
+
+.content {
+	width: 96%;
+	display: flex;
+	flex-flow: wrap row;
+	padding: 2%;
+	justify-content: center;
+}
+
+.card {
+	width: 250px;
+	margin-bottom: 25px;
+}
+
+.description {
+	width: 320px;
+	text-align: justify;
+	margin-left: 25px;
+}
+
+.description p {
+	margin: 0;
+}
+
+.main a img {
+	width: 32px;
+}
